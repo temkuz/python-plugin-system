@@ -7,13 +7,6 @@ class PluginValidator:
         return '__init__.py' in files
 
     @staticmethod
-    def has_config_cli_function(module: PluginModule):
-        """
-        Check if 'config_cli' in module
-        """
-        return getattr(module, 'config_cli', None)
-
-    @staticmethod
     def has_load_plugin_function(module: PluginModule):
         """
         Check if 'load_plugin' in module

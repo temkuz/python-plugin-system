@@ -1,10 +1,10 @@
 from poc_plugin.plugin import PluginSystem
-from poc_plugin.variables import CLI_UTILS
+from poc_plugin.variables.cli import CLI_PARSER
 
 
 def main():
     PluginSystem.load_plugins()
-    namespace = CLI_UTILS.parser.parse_args()
+    namespace = CLI_PARSER.parse_args()
     if 'func' in namespace:
         namespace.func(namespace)
 

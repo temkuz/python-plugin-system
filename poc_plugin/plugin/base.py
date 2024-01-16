@@ -2,7 +2,6 @@ from importlib.util import spec_from_file_location, module_from_spec
 from pathlib import Path
 import sys
 
-from poc_plugin.variables.cli import CLI_UTILS
 from poc_plugin.variables.plugin import PLUGINS_DIR
 
 from poc_plugin.types.plugins import PluginModule
@@ -29,7 +28,5 @@ class PluginSystem:
 
     @staticmethod
     def load_plugin(module: PluginModule):
-        if config_cli_func := PluginValidator.has_config_cli_function(module):
-            config_cli_func(CLI_UTILS)
         if load_plugin := PluginValidator.has_load_plugin_function(module):
             load_plugin()
