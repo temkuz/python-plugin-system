@@ -119,6 +119,7 @@ The plugin must be formatted as a Python module:
 - have an `__init__.py` file (required)
 - have a `load_plugin` function to initialize the plugin (required)
 - have a `config_cli` to configure cli (optional)
+- Define a default function `func `in `config_cli` that will be launched via cli (required if used `config_cli`)
 
 # Possible improvements
 
